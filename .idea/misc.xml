@@ -7,13 +7,15 @@
         <entry key="..\:/Workspace/AndroidStudio/Tugas15/app/src/main/res/drawable-v24/ic_launcher_background.xml" value="0.2755208333333333" />
         <entry key="..\:/Workspace/AndroidStudio/Tugas15/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.15" />
         <entry key="..\:/Workspace/AndroidStudio/Tugas15/app/src/main/res/drawable-v24/ic_search.xml" value="0.15" />
+        <entry key="..\:/Workspace/AndroidStudio/Tugas15/app/src/main/res/drawable/gradient_bg.xml" value="0.14947916666666666" />
         <entry key="..\:/Workspace/AndroidStudio/Tugas15/app/src/main/res/drawable/ic_back.xml" value="0.26145833333333335" />
         <entry key="..\:/Workspace/AndroidStudio/Tugas15/app/src/main/res/drawable/ic_baseline_menu_24.xml" value="0.2755208333333333" />
         <entry key="..\:/Workspace/AndroidStudio/Tugas15/app/src/main/res/drawable/ic_launcher_background.xml" value="0.15" />
         <entry key="..\:/Workspace/AndroidStudio/Tugas15/app/src/main/res/drawable/ic_menu.xml" value="0.2755208333333333" />
         <entry key="..\:/Workspace/AndroidStudio/Tugas15/app/src/main/res/drawable/ic_search.xml" value="0.26145833333333335" />
+        <entry key="..\:/Workspace/AndroidStudio/Tugas15/app/src/main/res/drawable/line_hr.xml" value="0.15" />
         <entry key="..\:/Workspace/AndroidStudio/Tugas15/app/src/main/res/font/poppins.xml" value="0.1640625" />
-        <entry key="..\:/Workspace/AndroidStudio/Tugas15/app/src/main/res/layout/activity_detail.xml" value="0.259375" />
+        <entry key="..\:/Workspace/AndroidStudio/Tugas15/app/src/main/res/layout/activity_detail.xml" value="0.4" />
         <entry key="..\:/Workspace/AndroidStudio/Tugas15/app/src/main/res/layout/activity_detail_movie.xml" value="0.259375" />
         <entry key="..\:/Workspace/AndroidStudio/Tugas15/app/src/main/res/layout/activity_main.xml" value="0.2453125" />
         <entry key="..\:/Workspace/AndroidStudio/Tugas15/app/src/main/res/layout/item_card_movie.xml" value="0.259375" />
@@ -21,6 +23,7 @@
         <entry key="..\:/Workspace/AndroidStudio/Tugas15/app/src/main/res/layout/list_movie.xml" value="0.13385416666666666" />
         <entry key="..\:/Workspace/AndroidStudio/Tugas15/app/src/main/res/layout/toolbar.xml" value="0.13385416666666666" />
         <entry key="..\:/Workspace/AndroidStudio/Tugas15/app/src/main/res/layout/toolbar_custom.xml" value="0.264" />
+        <entry key="..\:/Workspace/AndroidStudio/Tugas15/app/src/main/res/layout/toolbar_detail.xml" value="0.259375" />
         <entry key="..\:/Workspace/AndroidStudio/Tugas15/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.15" />
       </map>
     </option>

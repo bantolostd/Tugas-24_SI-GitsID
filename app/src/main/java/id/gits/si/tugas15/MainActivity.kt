@@ -3,6 +3,7 @@ package id.gits.si.tugas15
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.recyclerview.widget.LinearLayoutManager
 import id.gits.si.tugas15.model.MovieResponse
 import id.gits.si.tugas15.model.ResultsItem
@@ -16,6 +17,7 @@ import retrofit2.Response
 class MainActivity : AppCompatActivity() {
     val movieApiAdapter = MovieAPIAdapter(arrayListOf())
     override fun onCreate(savedInstanceState: Bundle?) {
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         rvMovie.layoutManager = LinearLayoutManager(this)

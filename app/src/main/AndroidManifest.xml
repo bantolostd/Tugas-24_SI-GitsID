@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Tugas15">
         <activity android:name=".DetailActivity"
-            android:theme="@style/Theme.Tugas15.WhiteStatusBar"></activity>
+            android:theme="@style/Theme.Tugas15.NoActionBar"></activity>
         <activity
             android:name=".MainActivity"
             android:exported="true"

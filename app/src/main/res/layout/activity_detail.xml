@@ -1,18 +1,146 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:orientation="vertical"
-    android:gravity="center"
     android:layout_height="match_parent"
+    android:background="@color/black"
+    android:orientation="vertical"
     tools:context=".DetailActivity">
 
+    <include
+        android:id="@+id/include"
+        layout="@layout/toolbar_detail"></include>
+
+
+    <ImageView
+        android:id="@+id/iv_backdrop_film"
+        android:layout_width="wrap_content"
+        android:layout_height="300dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toBottomOf="@+id/include"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp"
+        tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_backdrop_film"
+        app:layout_constraintEnd_toEndOf="@+id/iv_backdrop_film"
+        app:layout_constraintStart_toStartOf="@+id/iv_backdrop_film"
+        app:layout_constraintTop_toBottomOf="@+id/include"
+        app:srcCompat="@drawable/gradient_bg" />
+
+    <ImageView
+        android:id="@+id/iv_poster_film"
+        android:layout_width="125dp"
+        android:layout_height="175dp"
+        android:layout_marginStart="32dp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_backdrop_film"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_backdrop_film"
+        tools:srcCompat="@tools:sample/avatars" />
+
     <TextView
-        android:id="@+id/tv_judul"
+        android:id="@+id/tv_judul_film"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="267dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="TextView"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/iv_poster_film"
+        app:layout_constraintTop_toBottomOf="@+id/include"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tv_rating_film"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="TextView"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/rb_rating_film"
+        app:layout_constraintTop_toBottomOf="@+id/tv_tanggal_rilis_film" />
+
+    <TextView
+        android:id="@+id/tv_sinopsis_film"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:fontFamily="@font/poppins"
+        android:text="TextView"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_poster_film" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="25sp"
-        android:text="Judul"/>
+        android:backgroundTint="@color/violet"
+        android:clickable="true"
+        app:borderWidth="0dp"
+        app:hoveredFocusedTranslationZ="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_backdrop_film"
+        app:layout_constraintEnd_toEndOf="@+id/iv_backdrop_film"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include"
+        app:rippleColor="@color/white"
+        app:srcCompat="@android:drawable/ic_media_play" />
 
-</LinearLayout>
+    <TextView
+        android:id="@+id/tv_tanggal_rilis_film"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:text="TextView"
+        android:textSize="10dp"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/iv_poster_film"
+        app:layout_constraintTop_toBottomOf="@+id/tv_judul_film" />
+
+    <RatingBar
+        android:id="@+id/rb_rating_film"
+        style="?android:attr/ratingBarStyleSmall"
+        android:layout_width="68dp"
+        android:layout_height="23dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="@color/yellow_rating"
+        android:numStars="5"
+        android:theme="@style/RatingBar"
+        android:visibility="visible"
+        app:layout_constraintStart_toEndOf="@+id/iv_poster_film"
+        app:layout_constraintTop_toBottomOf="@+id/tv_tanggal_rilis_film" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BELI TIKET!"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_sinopsis_film" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
