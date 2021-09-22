@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cv_movie"
+    android:layout_gravity="center"
+    android:layout_marginTop="4dp"
+    android:layout_marginBottom="4dp"
+    android:layout_marginRight="8dp"
+    android:layout_marginLeft="8dp"
+    app:cardCornerRadius="15dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="18dp">
+        <ImageView
+            android:id="@+id/iv_poster_film"
+            android:layout_width="250px"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_launcher_background" />
+        <TextView
+            android:id="@+id/tv_judul_film"
+            android:layout_toEndOf="@id/iv_poster_film"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppins_semibold"
+            android:textSize="16dp"
+            android:text="Judul Film"/>
+        <TextView
+            android:id="@+id/tv_rating_film"
+            android:layout_toEndOf="@id/iv_poster_film"
+            android:layout_below="@id/tv_judul_film"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppins"
+            android:textSize="12dp"
+            android:text="Rating Film"/>
+        <TextView
+            android:id="@+id/tv_sinopsis_film"
+            android:layout_toEndOf="@id/iv_poster_film"
+            android:layout_below="@id/tv_rating_film"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppins"
+            android:textSize="12dp"
+            android:text="Sinposis Film"/>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
