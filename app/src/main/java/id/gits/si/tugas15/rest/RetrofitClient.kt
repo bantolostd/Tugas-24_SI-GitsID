@@ -1,29 +1,44 @@
 package id.gits.si.tugas15.rest
 
+import com.google.gson.GsonBuilder
+import id.gits.si.tugas15.Constant.Companion.BASE_URL
 import okhttp3.OkHttpClient
+import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-object RetrofitClient {
-    private const val BASE_URL = "https://api.themoviedb.org/3/"
-    private val okHttpClient = OkHttpClient.Builder()
-        .addInterceptor { chain ->
-            val original = chain.request()
-
-            val requestBuilder = original.newBuilder()
-                .method(original.method, original.body)
-
-            val request = requestBuilder.build()
-            chain.proceed(request)
-        }.build()
-
-    val instance: Api by lazy{
-        val retrofit = Retrofit.Builder()
-            .baseUrl(BASE_URL)
-            .addConverterFactory(GsonConverterFactory.create())
-            .client(okHttpClient)
+class RetrofitClient {
+    fun getInterceptor() : OkHttpClient {
+        val logging = HttpLoggingInterceptor()
+        logging.level = HttpLoggingInterceptor.Level.BODY
+        val okHttpClient = OkHttpClient.Builder()
+            .addInterceptor(logging)
             .build()
-
-        retrofit.create(Api::class.java)
+        return okHttpClient
     }
+
+    fun getRetrofitMovie() : Retrofit {
+        val gson = GsonBuilder()
+            .setLenient()
+            .create()
+        return Retrofit.Builder()
+            .baseUrl(BASE_URL)
+            .client(getInterceptor())
+            .addConverterFactory(GsonConverterFactory.create(gson))
+            .build()
+    }
+
+    fun getRetrofitDetailMovie() : Retrofit {
+        val gson = GsonBuilder()
+            .setLenient()
+            .create()
+        return Retrofit.Builder()
+            .baseUrl(BASE_URL)
+            .client(getInterceptor())
+            .addConverterFactory(GsonConverterFactory.create(gson))
+            .build()
+    }
+
+    fun getServiceMovie() = getRetrofitMovie().create(Api::class.java)
+    fun getServiceDetailMovie() = getRetrofitDetailMovie().create(Api::class.java)
 }

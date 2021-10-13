@@ -6,10 +6,10 @@
     android:layout_height="match_parent"
     android:background="@color/black"
     android:orientation="vertical"
-    tools:context=".DetailActivity">
+    tools:context=".activity.DetailMovieActivity">
 
     <include
-        android:id="@+id/include"
+        android:id="@+id/toolbar"
         layout="@layout/toolbar_detail"></include>
 
 
@@ -18,7 +18,7 @@
         android:layout_width="wrap_content"
         android:layout_height="300dp"
         android:scaleType="centerCrop"
-        app:layout_constraintTop_toBottomOf="@+id/include"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="0dp"
         tools:srcCompat="@tools:sample/backgrounds/scenic" />
@@ -30,7 +30,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/iv_backdrop_film"
         app:layout_constraintEnd_toEndOf="@+id/iv_backdrop_film"
         app:layout_constraintStart_toStartOf="@+id/iv_backdrop_film"
-        app:layout_constraintTop_toBottomOf="@+id/include"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
         app:srcCompat="@drawable/gradient_bg" />
 
     <ImageView
@@ -57,7 +57,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/iv_poster_film"
-        app:layout_constraintTop_toBottomOf="@+id/include"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
         tools:ignore="MissingConstraints" />
 
     <TextView
@@ -100,7 +100,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/iv_backdrop_film"
         app:layout_constraintEnd_toEndOf="@+id/iv_backdrop_film"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/include"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
         app:rippleColor="@color/white"
         app:srcCompat="@android:drawable/ic_media_play" />
 
@@ -133,7 +133,7 @@
         app:layout_constraintTop_toBottomOf="@+id/tv_tanggal_rilis_film" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnBeli"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="BELI TIKET!"

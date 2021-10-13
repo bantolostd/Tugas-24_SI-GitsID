@@ -11,10 +11,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Tugas15">
-        <activity android:name=".DetailActivity"
-            android:theme="@style/Theme.Tugas15.NoActionBar"></activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".activity.DetailMovieActivity"
+            android:exported="true" />
+        <!--
+        <activity
+            android:name=".activity.DetailMovieActivity"
+            android:exported="true" />
+        -->
+        <activity
+            android:name=".activity.MainActivity"
             android:exported="true"
             android:theme="@style/Theme.Tugas15.NoActionBar">
             <intent-filter>
